@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>像素 编码 容器与网络分层</title><desc>每个工位改变的东西不同，排错时要定位到相应层。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">07  像素 编码 容器与网络分层</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">每个工位改变的东西不同，排错时要定位到相应层。</text>
+<rect x="40" y="140" width="310" height="140" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="195.0" y="175" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">原始像素</text>
+<text x="195.0" y="207" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">RAW / RGB / NV12</text>
+<text x="195.0" y="234" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">大体积图像</text>
+<rect x="400" y="140" width="310" height="140" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="555.0" y="175" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">压缩码流</text>
+<text x="555.0" y="207" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">H.264 / H.265</text>
+<text x="555.0" y="234" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">编码器减少数据量</text>
+<rect x="760" y="140" width="310" height="140" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="915.0" y="175" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">组织与发送</text>
+<text x="915.0" y="207" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">MP4 / TS / RTSP</text>
+<text x="915.0" y="234" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">封装或传输</text>
+<path d="M350,210 L400,210" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M710,210 L760,210" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<rect x="40" y="360" width="310" height="130" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="195.0" y="395" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">编码器</text>
+<text x="195.0" y="427" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">mpph264enc / x264enc</text>
+<text x="195.0" y="454" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">像素 → 压缩数据</text>
+<rect x="400" y="360" width="310" height="130" rx="12" fill="#eee9f8" stroke="#bacbda"/>
+<text x="555.0" y="395" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">解析器</text>
+<text x="555.0" y="427" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">h264parse</text>
+<text x="555.0" y="454" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">整理已有压缩数据</text>
+<rect x="760" y="360" width="310" height="130" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="915.0" y="395" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">封装器</text>
+<text x="915.0" y="427" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">mp4mux / mpegtsmux</text>
+<text x="915.0" y="454" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">组织轨道与时间</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">文件后缀不能转换容器；parser 不做视频压缩；协议转换不等于转码。</text>
+</svg>

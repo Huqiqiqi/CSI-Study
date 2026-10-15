@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>一颗摄像头的三条通路</title><desc>图像通路正常与控制通路正常，需要分别验证。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">02  一颗摄像头的三条通路</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">图像通路正常与控制通路正常，需要分别验证。</text>
+<rect x="40" y="160" width="255" height="290" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="167.5" y="195" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">摄像头模组</text>
+<text x="167.5" y="227" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">镜头与传感器</text>
+<text x="167.5" y="254" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="167.5" y="281" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">控制寄存器</text>
+<text x="167.5" y="308" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="167.5" y="335" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">像素输出</text>
+<rect x="825" y="160" width="255" height="290" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="952.5" y="195" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">RK3588 开发板</text>
+<text x="952.5" y="227" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">I²C 控制器</text>
+<text x="952.5" y="254" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="952.5" y="281" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">MIPI PHY / CSI</text>
+<text x="952.5" y="308" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="952.5" y="335" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">电源 时钟 GPIO</text>
+<path d="M825,210 L295,210" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="195" font-size="18" text-anchor="middle" font-weight="400" style="fill:#526b82">控制：I²C / CCI</text>
+<path d="M295,310 L825,310" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="295" font-size="18" text-anchor="middle" font-weight="400" style="fill:#526b82">图像：CSI-2 over D-PHY</text>
+<path d="M825,410 L295,410" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="395" font-size="18" text-anchor="middle" font-weight="400" style="fill:#526b82">基础条件：供电 / XCLK / RESET</text>
+<text x="560" y="515" font-size="27" text-anchor="middle" font-weight="700" style="fill:#17324d">能读 ID ≠ 能持续收到正确图像</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">差分高速信号遵循 PHY 规范；供电电压不能直接当成所有引脚的信号电压。</text>
+</svg>

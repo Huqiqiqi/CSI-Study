@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>从镜头到浏览器</title><desc>主链路承载视频；音频与监控在对应位置汇合。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">01  从镜头到浏览器</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">主链路承载视频；音频与监控在对应位置汇合。</text>
+<rect x="40" y="125" width="310" height="130" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="195.0" y="160" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">摄像头</text>
+<text x="195.0" y="192" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">光 → RAW</text>
+<text x="195.0" y="219" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">I²C 控制 / CSI 输出</text>
+<rect x="400" y="125" width="310" height="130" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="555.0" y="160" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">RK3588 采集与 ISP</text>
+<text x="555.0" y="192" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">PHY → CSI → CIF</text>
+<text x="555.0" y="219" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">RAW → YUV / NV12</text>
+<rect x="760" y="125" width="310" height="130" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="915.0" y="160" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">硬件视频编码</text>
+<text x="915.0" y="192" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">MPP / 编码器</text>
+<text x="915.0" y="219" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">像素 → H.264</text>
+<path d="M350,190 L400,190" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M710,190 L760,190" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<rect x="40" y="350" width="310" height="130" rx="12" fill="#eee9f8" stroke="#bacbda"/>
+<text x="195.0" y="385" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">声音输入</text>
+<text x="195.0" y="417" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">麦克风 / I²S / USB</text>
+<text x="195.0" y="444" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">ALSA → AAC 或 Opus</text>
+<rect x="400" y="350" width="310" height="130" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="555.0" y="385" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">封装与分发</text>
+<text x="555.0" y="417" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">MP4 分段保存</text>
+<text x="555.0" y="444" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">RTSP → 媒体服务器</text>
+<rect x="760" y="350" width="310" height="130" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="915.0" y="385" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">观看端</text>
+<text x="915.0" y="417" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">WebRTC / HLS</text>
+<text x="915.0" y="444" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">解码 → 屏幕与声音</text>
+<path d="M915,255 L915,300 L555,300 L555,350" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M350,415 L400,415" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M710,415 L760,415" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="545" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">元数据 · 时间戳 · 错误监控 · 资源预算贯穿全程</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">入门顺序：测试图 → 单路采集 → 编码 → 录像 → 网页 → 音频 → 多路。</text>
+</svg>

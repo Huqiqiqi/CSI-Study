@@ -1,0 +1,42 @@
+# Lab configuration. Match fields against the exact installed MediaMTX release.
+# Publisher is local only. Readers must be on trusted private networks.
+logLevel: info
+rtsp: true
+rtspAddress: :8554
+rtspTransports: [tcp]
+rtmp: false
+srt: false
+hls: true
+hlsAddress: :8888
+webrtc: true
+webrtcAddress: :8889
+webrtcLocalUDPAddress: :8189
+# Add the board's reachable LAN IP if ICE advertises the wrong interface.
+webrtcAdditionalHosts: []
+api: false
+metrics: false
+pprof: false
+playback: false
+authMethod: internal
+authInternalUsers:
+  - user: any
+    pass:
+    ips: [127.0.0.1, '::1']
+    permissions:
+      - action: publish
+        path: '~^cam[0-3]$'
+  - user: any
+    pass:
+    ips: [127.0.0.1, '::1', 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12]
+    permissions:
+      - action: read
+        path: '~^cam[0-3]$'
+paths:
+  cam0:
+    source: publisher
+  cam1:
+    source: publisher
+  cam2:
+    source: publisher
+  cam3:
+    source: publisher

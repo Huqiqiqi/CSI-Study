@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>AI 旁路与主视频解耦</title><desc>AI 处理慢时优先保留最新输入，主录像仍按自己的要求推进。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">12  AI 旁路与主视频解耦</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">AI 处理慢时优先保留最新输入，主录像仍按自己的要求推进。</text>
+<rect x="40" y="190" width="260" height="140" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="170.0" y="225" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">ISP 输出 NV12</text>
+<text x="170.0" y="257" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">camera_id / PTS</text>
+<text x="170.0" y="284" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">原始图像 buffer</text>
+<rect x="425" y="120" width="280" height="130" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="565.0" y="155" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">主视频分支</text>
+<text x="565.0" y="187" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">硬件编码</text>
+<text x="565.0" y="214" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">录像 / 推流</text>
+<rect x="425" y="360" width="280" height="140" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="565.0" y="395" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">AI 输入分支</text>
+<text x="565.0" y="427" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">有界队列 / 抽帧</text>
+<text x="565.0" y="454" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">缩放 / 颜色 / 量化</text>
+<rect x="810" y="360" width="270" height="140" rx="12" fill="#eee9f8" stroke="#bacbda"/>
+<text x="945.0" y="395" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">NPU 推理</text>
+<text x="945.0" y="427" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">RKNN 模型</text>
+<text x="945.0" y="454" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">检测结果 + 时间戳</text>
+<rect x="810" y="120" width="270" height="130" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="945.0" y="155" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">结果呈现</text>
+<text x="945.0" y="187" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">框 / 元数据</text>
+<text x="945.0" y="214" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">按帧身份匹配</text>
+<path d="M300,235 L355,235 L355,185 L425,185" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M300,290 L355,290 L355,430 L425,430" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M705,430 L810,430" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M945,360 L945,250" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M705,185 L810,185" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">缩放与 letterbox 后要还原坐标；不要持有已经归还驱动的旧 buffer 指针。</text>
+</svg>

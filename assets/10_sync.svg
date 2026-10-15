@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>声音与图像共用呈现时间线</title><desc>时间戳必须保留语义；长时间漂移不能只靠固定偏移解决。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">10  声音与图像共用呈现时间线</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">时间戳必须保留语义；长时间漂移不能只靠固定偏移解决。</text>
+<text x="45" y="175" font-size="23" text-anchor="start" font-weight="700" style="fill:#17324d">视频</text>
+<rect x="150" y="130" width="105" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="202.5" y="165" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">帧 0</text>
+<text x="202" y="245" font-size="17" text-anchor="middle" font-weight="400" style="fill:#17324d">0.0 ms</text>
+<rect x="275" y="130" width="105" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="327.5" y="165" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">帧 1</text>
+<text x="327" y="245" font-size="17" text-anchor="middle" font-weight="400" style="fill:#17324d">33.3 ms</text>
+<rect x="400" y="130" width="105" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="452.5" y="165" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">帧 2</text>
+<text x="452" y="245" font-size="17" text-anchor="middle" font-weight="400" style="fill:#17324d">66.6 ms</text>
+<rect x="525" y="130" width="105" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="577.5" y="165" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">帧 3</text>
+<text x="577" y="245" font-size="17" text-anchor="middle" font-weight="400" style="fill:#17324d">99.9 ms</text>
+<rect x="650" y="130" width="105" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="702.5" y="165" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">帧 4</text>
+<text x="702" y="245" font-size="17" text-anchor="middle" font-weight="400" style="fill:#17324d">133.2 ms</text>
+<rect x="775" y="130" width="105" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="827.5" y="165" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">帧 5</text>
+<text x="827" y="245" font-size="17" text-anchor="middle" font-weight="400" style="fill:#17324d">166.5 ms</text>
+<rect x="900" y="130" width="105" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="952.5" y="165" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">帧 6</text>
+<text x="952" y="245" font-size="17" text-anchor="middle" font-weight="400" style="fill:#17324d">199.8 ms</text>
+<text x="45" y="340" font-size="23" text-anchor="start" font-weight="700" style="fill:#17324d">音频</text>
+<rect x="150" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="230" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="310" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="390" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="470" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="550" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="630" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="710" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="790" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="870" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<rect x="950" y="295" width="76" height="80" rx="6" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="590" y="410" font-size="22" text-anchor="middle" font-weight="400" style="fill:#17324d">连续采样，按时间戳与共同播放时钟对齐</text>
+<path d="M150,465 L1045,465" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="510" font-size="22" text-anchor="middle" font-weight="700" style="fill:#17324d">固定偏移：启动 / 缓冲差异    漂移：硬件时钟速率差异</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">多路同时启动 ≠ 同时曝光；需要同步采集时另行设计传感器触发。</text>
+</svg>

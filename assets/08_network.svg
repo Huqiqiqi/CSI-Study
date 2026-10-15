@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>一个发布者 多种观看方式</title><desc>先把媒体服务放在板端；远程部署时再替换服务器地址。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">08  一个发布者 多种观看方式</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">先把媒体服务放在板端；远程部署时再替换服务器地址。</text>
+<rect x="40" y="175" width="285" height="190" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="182.5" y="210" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">RK3588 发布者</text>
+<text x="182.5" y="242" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">CSI → NV12 → H.264</text>
+<text x="182.5" y="269" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="182.5" y="296" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">RTSP TCP 发布</text>
+<rect x="425" y="175" width="285" height="190" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="567.5" y="210" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">MediaMTX</text>
+<text x="567.5" y="242" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">接收 / 路由 / 分发</text>
+<text x="567.5" y="269" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="567.5" y="296" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">不自动替你转码</text>
+<rect x="810" y="115" width="270" height="110" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="945.0" y="150" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">原生播放器</text>
+<text x="945.0" y="182" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">RTSP :8554</text>
+<rect x="810" y="280" width="270" height="110" rx="12" fill="#eee9f8" stroke="#bacbda"/>
+<text x="945.0" y="315" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">浏览器 WebRTC</text>
+<text x="945.0" y="347" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">HTTP :8889 + 媒体</text>
+<rect x="810" y="445" width="270" height="110" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="945.0" y="480" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">浏览器 HLS</text>
+<text x="945.0" y="512" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">HTTP :8888</text>
+<path d="M325,270 L425,270" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="375" y="250" font-size="18" text-anchor="middle" font-weight="400" style="fill:#526b82">压缩流</text>
+<path d="M710,220 L760,220 L760,170 L810,170" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M710,270 L780,270 L780,335 L810,335" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M710,320 L740,320 L740,500 L810,500" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="385" y="445" font-size="22" text-anchor="middle" font-weight="700" style="fill:#17324d">板端 localhost = 板端自己</text>
+<text x="385" y="485" font-size="22" text-anchor="middle" font-weight="700" style="fill:#17324d">电脑观看时填写开发板 IP</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">网页握手成功不等于媒体可达；WebRTC 示例还需 UDP 8189 可达。</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>多路需要共享资源预算</title><desc>每路单独通过，再测试同时运行；不由接口数推断总吞吐。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">11  多路需要共享资源预算</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">每路单独通过，再测试同时运行；不由接口数推断总吞吐。</text>
+<rect x="35" y="115" width="210" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="140.0" y="150" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">cam0</text>
+<path d="M245,155 L330,155" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<rect x="35" y="220" width="210" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="140.0" y="255" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">cam1</text>
+<path d="M245,260 L330,260" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<rect x="35" y="325" width="210" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="140.0" y="360" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">cam2</text>
+<path d="M245,365 L330,365" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<rect x="35" y="430" width="210" height="80" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="140.0" y="465" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">cam3</text>
+<path d="M245,470 L330,470" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<rect x="330" y="115" width="400" height="395" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="530.0" y="150" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">共同资源</text>
+<text x="530.0" y="182" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">PHY / CSI / CIF 路由</text>
+<text x="530.0" y="209" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="530.0" y="236" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">ISP 处理能力与 DDR</text>
+<text x="530.0" y="263" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="530.0" y="290" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">MPP 编码并发与吞吐</text>
+<text x="530.0" y="317" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d"></text>
+<text x="530.0" y="344" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">电源 / 温度 / buffer</text>
+<rect x="825" y="145" width="255" height="110" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="952.5" y="180" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">本地录像</text>
+<text x="952.5" y="212" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">总码率 / 写延迟</text>
+<rect x="825" y="345" width="255" height="110" rx="12" fill="#eee9f8" stroke="#bacbda"/>
+<text x="952.5" y="380" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">网络与浏览器</text>
+<text x="952.5" y="412" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">总带宽 / 播放能力</text>
+<path d="M730,210 L825,210" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M730,400 L825,400" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="552" font-size="22" text-anchor="middle" font-weight="700" style="fill:#17324d">扩展顺序：单路 → 双路 → 四路 → 长时间与故障演练</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">虚拟 ISP 节点不是独立硬件；四路可打开不等于目标帧率全部达成。</text>
+</svg>

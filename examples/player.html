@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RK3588 摄像头实验播放器</title>
+<style>body{font:17px/1.7 system-ui,'Microsoft YaHei',sans-serif;margin:0;background:#f3f6f9;color:#17293c}main{max-width:1050px;margin:40px auto;padding:24px}h1{font-size:30px}form{display:flex;gap:15px;flex-wrap:wrap;align-items:end}label{display:grid;gap:6px}input,select,button{font:inherit;padding:10px;border:1px solid #b7c7d5;border-radius:7px}button{background:#195d85;color:#fff;cursor:pointer}iframe{margin-top:24px;width:100%;aspect-ratio:16/9;border:1px solid #b7c7d5;background:#142536;border-radius:10px}#status{overflow-wrap:anywhere}small{color:#506379}</style></head>
+<body><main><h1>摄像头实验播放器</h1><p>先在 RK3588 启动 MediaMTX 并发布对应视频，再连接。此页面不采集摄像头，也不会自动启动服务。</p>
+<form id="connect"><label>开发板 IP 或主机名<input id="host" value="192.168.1.50" required></label>
+<label>摄像头<select id="camera"><option>cam0</option><option>cam1</option><option>cam2</option><option>cam3</option></select></label>
+<label>协议<select id="mode"><option value="8889">WebRTC</option><option value="8888">HLS</option></select></label>
+<label>入口<select id="scheme"><option>http</option><option>https</option></select></label>
+<button type="submit">连接画面</button><button type="button" id="stop">断开</button></form>
+<p id="status" role="status">尚未连接。默认端口对应教材局域网配置。</p>
+<iframe id="screen" title="摄像头播放画面" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><small>HTTP 是实验配置。HTTPS 需要服务器实际配置证书和对应端口。页面打开不等于媒体可达；黑屏时先检查发布日志、编码格式与 WebRTC UDP 连接。</small></p>
+</main><script>
+const frame=document.getElementById('screen'),statusEl=document.getElementById('status');
+document.getElementById('connect').addEventListener('submit',e=>{
+e.preventDefault();const host=document.getElementById('host').value.trim();
+if(!/^[a-zA-Z0-9.-]+$/.test(host)){statusEl.textContent='请输入 IPv4 地址或主机名，不含协议、路径或端口。';return;}
+const url=new URL(document.getElementById('scheme').value+'://'+host+':'+document.getElementById('mode').value+'/'+document.getElementById('camera').value);
+frame.src=url.href;statusEl.textContent='正在请求 '+url.href+'；请以播放器画面和服务器日志判断是否成功。';
+});
+document.getElementById('stop').addEventListener('click',()=>{frame.removeAttribute('src');statusEl.textContent='已断开网页播放器。板端发布进程仍独立运行。';});
+</script></body></html>

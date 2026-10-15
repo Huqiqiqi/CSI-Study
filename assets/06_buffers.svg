@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>buffer 是需要归还的周转箱</title><desc>MMAP 映射内存；QBUF 与 DQBUF 转移使用权。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">06  buffer 是需要归还的周转箱</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">MMAP 映射内存；QBUF 与 DQBUF 转移使用权。</text>
+<rect x="70" y="140" width="330" height="120" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="235.0" y="175" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">应用持有空 buffer</text>
+<text x="235.0" y="207" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">初始化 REQBUFS / mmap</text>
+<text x="235.0" y="234" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">后续循环重复利用</text>
+<rect x="720" y="140" width="330" height="120" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="885.0" y="175" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">驱动持有空 buffer</text>
+<text x="885.0" y="207" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">QBUF 后等待硬件</text>
+<text x="885.0" y="234" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">DMA 写入图像</text>
+<rect x="720" y="375" width="330" height="120" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="885.0" y="410" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">一帧完成</text>
+<text x="885.0" y="442" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">记录时间戳 / sequence</text>
+<text x="885.0" y="469" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">应用 poll 等待完成</text>
+<rect x="70" y="375" width="330" height="120" rx="12" fill="#eee9f8" stroke="#bacbda"/>
+<text x="235.0" y="410" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">应用使用这一帧</text>
+<text x="235.0" y="442" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">DQBUF 后读取</text>
+<text x="235.0" y="469" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">完成使用再归还</text>
+<path d="M400,200 L720,200" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="180" font-size="18" text-anchor="middle" font-weight="400" style="fill:#526b82">QBUF</text>
+<path d="M885,260 L885,375" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M720,435 L400,435" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="560" y="415" font-size="18" text-anchor="middle" font-weight="400" style="fill:#526b82">DQBUF</text>
+<path d="M235,375 L235,260" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="135" y="325" font-size="18" text-anchor="middle" font-weight="400" style="fill:#526b82">用完回收</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">QBUF 后不能继续无约束使用旧指针；异步编码和 AI 需要引用与同步设计。</text>
+</svg>

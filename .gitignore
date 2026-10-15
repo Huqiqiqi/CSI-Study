@@ -1,0 +1,29 @@
+# Local service state and credentials
+.runtime/
+.env
+.env.*
+!.env.example
+examples/env.sh
+*.pem
+*.key
+
+# Dependencies and interpreter caches
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated QA screenshots, temporary learning records and recordings
+tools/qa/
+tools/qa-learning/
+recordings/
+*.log
+*.pid
+*.zip
+
+# Operating-system/editor temporary files
+.DS_Store
+Thumbs.db
+~$*
+*.swp

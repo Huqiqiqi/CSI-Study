@@ -1,0 +1,17 @@
+{
+  "name": "rk3588-csi-study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RK3588 CSI full-chain learning website, textbook and lab examples",
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "build": "node tools/build.mjs && node tools/build-learn.mjs",
+    "test:reader": "node tools/qa.mjs",
+    "test:site": "node tools/qa-learn.mjs"
+  },
+  "devDependencies": {
+    "marked": "17.0.5",
+    "playwright": "1.62.1"
+  }
+}

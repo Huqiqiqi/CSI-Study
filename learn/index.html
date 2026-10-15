@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>从一帧开始 · RK3588 学习站</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="scrim" id="scrim"></div>
+<aside class="sidebar" id="sidebar">
+  <a href="#home" class="brand"><span class="brand-mark">RK</span><span>从一帧开始<small>RK3588 · VIDEO LAB</small></span></a>
+  <div class="side-caption">你的开发学习空间</div>
+  <nav class="primary-nav" aria-label="学习工具">
+    <a href="#home" data-page="home">⌂ <span>学习概览</span></a>
+    <a href="#notebook" data-page="notebook">▤ <span>我的笔记</span><span id="notes-count" class="count">0</span></a>
+    <a href="#lab" data-page="lab">◈ <span>带宽实验台</span></a>
+  </nav>
+  <div class="side-caption chapter-label">完整学习路线 <span>9 CHAPTERS</span></div>
+  <nav id="syllabus" aria-label="课程目录"></nav>
+  <div class="side-bottom"><div><span>学习进度</span><strong id="progress-label">0%</strong></div><progress id="progress" value="0" max="100"></progress><small id="progress-count">正在加载课程…</small><a href="/reader" target="_blank">打开完整教材 ↗</a></div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><button id="menu" class="icon mobile-menu" aria-label="打开课程目录">☰</button><div class="breadcrumb" id="breadcrumb">学习概览</div><div class="top-actions"><button id="search-open" class="search-button">⌕ <span>搜索教材</span><kbd>/</kbd></button><button id="settings-open" class="quiet">API 设置</button><button id="assistant-open" class="primary compact">学习助手</button></div></header>
+  <main id="main" tabindex="-1"><div class="loading">正在准备你的学习空间…</div></main>
+  <footer class="site-footer">正点原子 RK3588 · 从理解数据到独立调通系统 <span>教程示例需按实际板卡与 SDK 核对</span></footer>
+</div>
+<aside class="assistant" id="assistant" aria-label="学习助手">
+  <div class="assistant-head"><div><span class="eyebrow">LEARNING COMPANION</span><h2>不懂，就在这里问</h2></div><button id="assistant-close" class="icon" aria-label="关闭学习助手">×</button></div>
+  <div class="assistant-mode"><select id="answer-mode" aria-label="回答方式"><option value="local">教材检索 · 无需 API</option><option value="ai">AI 讲解 · 使用你的 API</option></select><span id="api-status">未配置 API</span></div>
+  <div id="chat" class="chat" aria-live="polite"></div>
+  <div class="chat-bottom"><div class="context-label"><span id="context-label">当前：课程概览</span><button id="clear-chat" class="text-button">清空对话</button></div><div id="quote-box" hidden><div id="quote-text"></div><button id="clear-quote" aria-label="移除引用">×</button></div><div class="prompt-chips"><button data-prompt="请用一个生活中的类比解释这一节，再给一个 RK3588 的例子。">通俗讲一遍</button><button data-prompt="带我做这一节的实验，先说明前提、每一步目的和验收方法。">带我做实验</button><button data-prompt="针对这一节出一道理解题，先不要告诉我答案。">考考我</button></div><form id="ask-form"><label class="sr-only" for="question">你的问题</label><textarea id="question" rows="3" maxlength="6000" placeholder="哪里没看懂？也可以粘贴报错…"></textarea><div class="composer-foot"><small>自动带上当前小节与选中文字</small><button type="submit" id="send" class="primary">发送 ↑</button></div></form><p class="privacy-note">AI 模式会向你配置的服务发送问题、相关教材和近期对话。请勿粘贴密钥。</p></div>
+</aside>
+<div id="selection-bar" hidden><button id="ask-selection">✧ 解释选中文字</button></div>
+<dialog id="settings-dialog"><form id="settings-form"><div class="dialog-title"><div><span class="eyebrow">CONNECT YOUR MODEL</span><h2>连接你的 AI 服务</h2></div><button type="button" class="icon" data-close="settings-dialog" aria-label="关闭设置">×</button></div><p>已有 URL 和 API Key 就可以尝试接入。模型名称和接口类型请以服务商说明为准。</p><label>API URL<input id="api-url" type="url" required placeholder="https://你的服务地址/v1" autocomplete="off"></label><small>支持基础地址或完整的 /responses、/chat/completions 地址。远程服务使用 HTTPS，本机代理可使用 HTTP。</small><label>接口类型<select id="api-protocol"><option value="responses">Responses（/responses）</option><option value="chat">Chat Completions（/chat/completions）</option></select></label><label>模型名称<input id="api-model" required maxlength="200" placeholder="填写服务商提供的准确模型 ID" autocomplete="off"></label><label>API Key<input id="api-key" type="password" placeholder="仅存于本机服务内存" autocomplete="off" maxlength="8192"></label><small>相同 URL 下留空可沿用本次启动已设置的密钥。本机无认证服务可留空。更换 URL 时请重新填写。</small><div class="notice">密钥不会写入网页、学习记录或磁盘。关闭服务后密钥失效。保存设置不会发送请求；首次提问会验证连接，并可能产生服务费用。</div><p id="settings-feedback" role="status"></p><div class="dialog-actions"><button type="button" id="clear-api" class="quiet">断开并清除密钥</button><button type="submit" class="primary">保存连接设置</button></div></form></dialog>
+<dialog id="search-dialog"><div class="dialog-title"><h2>搜索整本教材</h2><button class="icon" data-close="search-dialog" aria-label="关闭搜索">×</button></div><label class="sr-only" for="search-input">搜索关键词</label><input id="search-input" type="search" placeholder="试试：CSI、驱动、NV12、网页播放…"><div id="search-results"></div></dialog>
+<dialog id="figure-dialog"><button class="icon" data-close="figure-dialog" aria-label="关闭图片">×</button><img id="figure-large" alt=""><p id="figure-caption"></p></dialog>
+<input id="import-file" type="file" accept="application/json,.json" hidden>
+<div id="toast" role="status" hidden></div>
+</body></html>

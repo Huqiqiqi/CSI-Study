@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>同一画面的三种表示</title><desc>以下都是未压缩图像表示；H.264 是另一层的压缩编码。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">04  同一画面的三种表示</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">以下都是未压缩图像表示；H.264 是另一层的压缩编码。</text>
+<text x="205" y="135" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">Bayer RAW</text>
+<rect x="65" y="160" width="66" height="56" fill="#f5b5b5" rx="5"/>
+<text x="98" y="197" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">R</text>
+<rect x="135" y="160" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="168" y="197" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="205" y="160" width="66" height="56" fill="#f5b5b5" rx="5"/>
+<text x="238" y="197" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">R</text>
+<rect x="275" y="160" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="308" y="197" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="65" y="220" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="98" y="257" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="135" y="220" width="66" height="56" fill="#b8d5f3" rx="5"/>
+<text x="168" y="257" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">B</text>
+<rect x="205" y="220" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="238" y="257" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="275" y="220" width="66" height="56" fill="#b8d5f3" rx="5"/>
+<text x="308" y="257" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">B</text>
+<rect x="65" y="280" width="66" height="56" fill="#f5b5b5" rx="5"/>
+<text x="98" y="317" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">R</text>
+<rect x="135" y="280" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="168" y="317" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="205" y="280" width="66" height="56" fill="#f5b5b5" rx="5"/>
+<text x="238" y="317" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">R</text>
+<rect x="275" y="280" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="308" y="317" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="65" y="340" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="98" y="377" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="135" y="340" width="66" height="56" fill="#b8d5f3" rx="5"/>
+<text x="168" y="377" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">B</text>
+<rect x="205" y="340" width="66" height="56" fill="#b9e1c5" rx="5"/>
+<text x="238" y="377" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="275" y="340" width="66" height="56" fill="#b8d5f3" rx="5"/>
+<text x="308" y="377" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">B</text>
+<text x="205" y="445" font-size="20" text-anchor="middle" font-weight="400" style="fill:#17324d">每位置只有一种颜色样本</text>
+<text x="550" y="135" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">RGB888</text>
+<rect x="420" y="160" width="80" height="240" rx="12" fill="#f5b5b5" stroke="#bacbda"/>
+<text x="460.0" y="195" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">R</text>
+<rect x="507" y="160" width="80" height="240" rx="12" fill="#b9e1c5" stroke="#bacbda"/>
+<text x="547.0" y="195" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">G</text>
+<rect x="594" y="160" width="80" height="240" rx="12" fill="#b8d5f3" stroke="#bacbda"/>
+<text x="634.0" y="195" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">B</text>
+<text x="550" y="445" font-size="20" text-anchor="middle" font-weight="400" style="fill:#17324d">每像素 R G B 三个分量</text>
+<text x="915" y="135" font-size="24" text-anchor="middle" font-weight="700" style="fill:#17324d">NV12</text>
+<rect x="770" y="160" width="290" height="150" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="915.0" y="195" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">Y 亮度平面</text>
+<text x="915.0" y="227" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">宽 × 高</text>
+<rect x="770" y="325" width="290" height="75" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="915.0" y="360" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">UV UV UV…</text>
+<text x="915" y="445" font-size="20" text-anchor="middle" font-weight="400" style="fill:#17324d">4:2:0 色度 / UV 交错</text>
+<text x="560" y="515" font-size="21" text-anchor="middle" font-weight="700" style="fill:#17324d">无额外对齐的 1080p NV12：2,073,600 + 1,036,800 = 3,110,400 字节</text>
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">实际大小以驱动报告的 stride、sizeimage 和 plane 数据为准。</text>
+</svg>

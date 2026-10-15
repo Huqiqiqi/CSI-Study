@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img">
+<title>Linux 摄像头栈</title><desc>应用看到设备节点；驱动和媒体拓扑管理节点背后的硬件。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5b7690"/></marker></defs>
+<rect width="1120" height="620" rx="16" fill="#f8fafc"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#17324d} .muted{fill:#526b82}</style>
+<text x="36" y="48" font-size="28" text-anchor="start" font-weight="700" style="fill:#17324d">05  Linux 摄像头栈</text>
+<text x="36" y="80" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">应用看到设备节点；驱动和媒体拓扑管理节点背后的硬件。</text>
+<rect x="40" y="120" width="1040" height="85" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="560.0" y="155" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">应用层</text>
+<text x="560.0" y="187" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">v4l2-ctl / GStreamer / 自己的 C 或 Python 程序</text>
+<rect x="40" y="245" width="310" height="110" rx="12" fill="#e5f4ed" stroke="#bacbda"/>
+<text x="195.0" y="280" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">/dev/videoX</text>
+<text x="195.0" y="312" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">图像 / RAW / 统计等</text>
+<text x="195.0" y="339" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">必须识别节点职责</text>
+<rect x="405" y="245" width="310" height="110" rx="12" fill="#fff0d9" stroke="#bacbda"/>
+<text x="560.0" y="280" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">/dev/mediaX</text>
+<text x="560.0" y="312" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">entity / pad / link</text>
+<text x="560.0" y="339" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">观察连接与路由</text>
+<rect x="770" y="245" width="310" height="110" rx="12" fill="#eee9f8" stroke="#bacbda"/>
+<text x="925.0" y="280" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">/dev/v4l-subdevX</text>
+<text x="925.0" y="312" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">sensor 等内部模块</text>
+<text x="925.0" y="339" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">格式与控制</text>
+<path d="M195,205 L195,245" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M560,205 L560,245" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M925,205 L925,245" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<rect x="40" y="405" width="1040" height="115" rx="12" fill="#e7f1fb" stroke="#bacbda"/>
+<text x="560.0" y="440" font-size="23" text-anchor="middle" font-weight="700" style="fill:#17324d">内核与硬件</text>
+<text x="560.0" y="472" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">sensor → PHY → CSI receiver → CIF/VICAP → ISP → 图像 buffer</text>
+<text x="560.0" y="499" font-size="19" text-anchor="middle" font-weight="400" style="fill:#17324d">实际直通 / DDR 读回 / 虚拟 ISP 路由依 BSP 而定</text>
+<path d="M195,355 L195,405" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M560,355 L560,405" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<path d="M925,355 L925,405" fill="none" stroke="#5b7690" stroke-width="2.5" marker-end="url(#arrow)" />
+<text x="36" y="595" font-size="18" text-anchor="start" font-weight="400" style="fill:#526b82">设备树描述连接与资源；驱动执行操作；IQ 与 3A 影响图像质量。</text>
+</svg>
